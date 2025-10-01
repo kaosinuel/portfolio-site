@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* global: black bg + white text */
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body { @apply bg-black text-white antialiased; }
