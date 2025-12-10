@@ -91,6 +91,17 @@ export default function App() {
                   LinkedIn
                 </a>
 
+                {/* GITHUB */}
+                <a
+                  href="https://github.com/kaosinuel"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Open GitHub in a new tab"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/10 px-4 py-2 transition hover:bg-white/15 active:translate-y-[1px]"
+                >
+                  GitHub
+                </a>
+
                 {/* ITCH.IO*/}
                 <a
                   href="https://kaozine.itch.io"
