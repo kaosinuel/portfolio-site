@@ -111,12 +111,27 @@ export default function App() {
                 </a>
 
                 {/* RESUME */}
-                <a
-                  href="/Kaosine_Resume.pdf"
+                <button
+                  onClick={async () => {
+                    try {
+                      const response = await fetch('/KaosiNuel-Resume.pdf');
+                      const blob = await response.blob();
+                      const url = window.URL.createObjectURL(blob);
+                      const link = document.createElement('a');
+                      link.href = url;
+                      link.download = 'KaosiNuel-Resume.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                      window.URL.revokeObjectURL(url);
+                    } catch (error) {
+                      console.error('Failed to download resume:', error);
+                    }
+                  }}
                   className="rounded-xl border border-white/10 px-4 py-2 transition hover:bg-white/10 active:translate-y-[1px]"
                 >
                   View my resume!
-                </a>
+                </button>
               </div>
 
               {/* tiny timestamp */}
